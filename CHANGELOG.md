@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.1 (2025-09-01)
+
+### 🐛 Bug Fixes
+
+* fix deploy ([386115a](https://github.com/oondemand/cst-omie-sorocaba-frontend/commit/386115ac080eabfef376c0e549392b1b7ea581f3))
+
 ## 0.0.0 (2025-09-01)
 
 ## 0.0.5 (2025-08-29)
