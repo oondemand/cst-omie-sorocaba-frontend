@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cst-multimoedas-frontend-homolog
-  namespace: cst-multimoedas-homolog
+  name: cst-omie-sorocaba-frontend-homolog
+  namespace: cst-omie-sorocaba-homolog
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cst-multimoedas-frontend-homolog
+      app: cst-omie-sorocaba-frontend-homolog
   template:
     metadata:
       labels:
-        app: cst-multimoedas-frontend-homolog
+        app: cst-omie-sorocaba-frontend-homolog
     spec:
       containers:
-        - name: cst-multimoedas-frontend-homolog-container
-          image: ghcr.io/oondemand/cst-multimoedas-frontend:${IMAGE_TAG}-homolog
+        - name: cst-omie-sorocaba-frontend-homolog-container
+          image: ghcr.io/oondemand/cst-omie-sorocaba-frontend:${IMAGE_TAG}-homolog
           ports:
             - containerPort: 3000
           resources:

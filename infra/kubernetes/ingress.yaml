@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: cst-multimoedas-frontend-ingress
-  namespace: cst-multimoedas
+  name: cst-omie-sorocaba-frontend-ingress
+  namespace: cst-omie-sorocaba
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-nginx
     kubernetes.io/ingress.class: nginx
@@ -13,16 +13,16 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - cst-multimoedas.oondemand.online
+        - cst-omie-sorocaba.oondemand.online
       secretName: app-tls
   rules:
-    - host: cst-multimoedas.oondemand.online
+    - host: cst-omie-sorocaba.oondemand.online
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: cst-multimoedas-frontend-service
+                name: cst-omie-sorocaba-frontend-service
                 port:
                   number: 80
